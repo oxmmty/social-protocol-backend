@@ -978,7 +978,7 @@ func (fes *APIServer) AdminDownloadRefereeCSV(ww http.ResponseWriter, req *http.
 		// nextRow = append(nextRow, lib.PkToString(lib.PKIDToPublicKey(referrerPKID), fes.Params))
 		// nextRow = append(nextRow, referrerUsernameStr)
 		// nextRow = append(nextRow, lib.PkToString(lib.PKIDToPublicKey(refereePKID), fes.Params))
-		nextRow = append(nextRow, refereeUsernameStr)
+		// nextRow = append(nextRow, refereeUsernameStr)
 		nextRow = append(nextRow, strconv.FormatInt(refereePostsLen, 10))
 		nextRow = append(nextRow, strconv.FormatInt(refereeLikesLen, 10))
 		nextRow = append(nextRow, strconv.FormatInt(refereeDiamondsLen, 10))
