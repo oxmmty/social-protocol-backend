@@ -991,9 +991,9 @@ func (fes *APIServer) AdminDownloadRefereeCSV(ww http.ResponseWriter, req *http.
 	}
 
 	// If we made it this far we were successful, return without error.
-	res := AdminDownloadRefereeCSVResponse{
-		CSVRows: csvRows,
-	}
+	// res := AdminDownloadRefereeCSVResponse{
+	// 	CSVRows: csvRows,
+	// }
 	if err := json.NewEncoder(ww).Encode(res); err != nil {
 		_AddBadRequestError(ww, fmt.Sprintf(
 			"AdminDownloadRefereeCSV: Problem encoding response as JSON: %v", err))
