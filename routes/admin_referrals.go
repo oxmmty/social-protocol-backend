@@ -974,7 +974,7 @@ func (fes *APIServer) AdminDownloadRefereeCSV(ww http.ResponseWriter, req *http.
 
 		// Assemble the row.
 		nextRow := []string{}
-		nextRow = append(nextRow, string(referralHashBytes))
+		// nextRow = append(nextRow, string(referralHashBytes))
 		nextRow = append(nextRow, lib.PkToString(lib.PKIDToPublicKey(referrerPKID), fes.Params))
 		nextRow = append(nextRow, referrerUsernameStr)
 		nextRow = append(nextRow, lib.PkToString(lib.PKIDToPublicKey(refereePKID), fes.Params))
