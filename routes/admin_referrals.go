@@ -979,7 +979,7 @@ func (fes *APIServer) AdminDownloadRefereeCSV(ww http.ResponseWriter, req *http.
 		// nextRow = append(nextRow, referrerUsernameStr)
 		// nextRow = append(nextRow, strconv.FormatInt(refereePostsLen, 10))
 		// nextRow = append(nextRow, strconv.FormatInt(refereeLikesLen, 10))
-		nextRow = append(nextRow, strconv.FormatInt(refereeDiamondsLen, 10))
+		// nextRow = append(nextRow, strconv.FormatInt(refereeDiamondsLen, 10))
 		if refereePostsLen > 0 {
 			oldestRefereePost := refereePostEntries[len(refereePostEntries)-1]
 			nextRow = append(nextRow, time.Unix(0, int64(oldestRefereePost.TimestampNanos)).String())
