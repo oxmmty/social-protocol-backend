@@ -974,26 +974,26 @@ func (fes *APIServer) AdminDownloadRefereeCSV(ww http.ResponseWriter, req *http.
 
 		// Assemble the row.
 		nextRow := []string{}
-		// nextRow = append(nextRow, string(referralHashBytes))
-		// nextRow = append(nextRow, lib.PkToString(lib.PKIDToPublicKey(referrerPKID), fes.Params))
-		// nextRow = append(nextRow, referrerUsernameStr)
-		// nextRow = append(nextRow, strconv.FormatInt(refereePostsLen, 10))
-		// nextRow = append(nextRow, strconv.FormatInt(refereeLikesLen, 10))
-		// nextRow = append(nextRow, strconv.FormatInt(refereeDiamondsLen, 10))
-		// if refereePostsLen > 0 {
-		// 	oldestRefereePost := refereePostEntries[len(refereePostEntries)-1]
-		// 	nextRow = append(nextRow, time.Unix(0, int64(oldestRefereePost.TimestampNanos)).String())
-		// } else {
-		// 	nextRow = append(nextRow, "")
-		// }
+		nextRow = append(nextRow, string(referralHashBytes))
+		nextRow = append(nextRow, lib.PkToString(lib.PKIDToPublicKey(referrerPKID), fes.Params))
+		nextRow = append(nextRow, referrerUsernameStr)
+		nextRow = append(nextRow, strconv.FormatInt(refereePostsLen, 10))
+		nextRow = append(nextRow, strconv.FormatInt(refereeLikesLen, 10))
+		nextRow = append(nextRow, strconv.FormatInt(refereeDiamondsLen, 10))
+		if refereePostsLen > 0 {
+			oldestRefereePost := refereePostEntries[len(refereePostEntries)-1]
+			nextRow = append(nextRow, time.Unix(0, int64(oldestRefereePost.TimestampNanos)).String())
+		} else {
+			nextRow = append(nextRow, "")
+		}
 
-		// csvRows = append(csvRows, nextRow)
+		csvRows = append(csvRows, nextRow)
 	}
 
 	// If we made it this far we were successful, return without error.
-	// res := AdminDownloadRefereeCSVResponse{
-	// 	CSVRows: csvRows,
-	// }
+	res := AdminDownloadRefereeCSVResponse{
+		CSVRows: csvRows,
+	}
 	if err := json.NewEncoder(ww).Encode(res); err != nil {
 		_AddBadRequestError(ww, fmt.Sprintf(
 			"AdminDownloadRefereeCSV: Problem encoding response as JSON: %v", err))
