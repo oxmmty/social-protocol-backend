@@ -47,8 +47,8 @@ type WyreWalletOrderFullDetails struct {
 	// AuthCodesRequested      bool    `json:"authCodesRequested"`
 	// ErrorCategory           string  `json:"errorCategory"`
 	// ErrorCode               string  `json:"errorCode"`
-	ErrorMessage            string  `json:"errorMessage"`
-	FailureReason           string  `json:"failureReason"`
+	// ErrorMessage            string  `json:"errorMessage"`
+	// FailureReason           string  `json:"failureReason"`
 	AccountId               string  `json:"accountId"`
 	PaymentNetworkErrorCode string  `json:"paymentNetworkErrorCode"`
 	InternalErrorCode       string  `json:"internalErrorCode"`
