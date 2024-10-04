@@ -39,8 +39,8 @@ type WyreWalletOrderFullDetails struct {
 	// Status                  string  `json:"status"`
 	// OrderType               string  `json:"orderType"`
 	// SourceAmount            float64 `json:"sourceAmount"`
-	PurchaseAmount          float64 `json:"purchaseAmount"`
-	SourceCurrency          string  `json:"sourceCurrency"`
+	// PurchaseAmount          float64 `json:"purchaseAmount"`
+	// SourceCurrency          string  `json:"sourceCurrency"`
 	DestCurrency            string  `json:"destCurrency"`
 	TransferId              string  `json:"transferId"`
 	Dest                    string  `json:"dest"`
