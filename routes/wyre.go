@@ -49,9 +49,9 @@ type WyreWalletOrderFullDetails struct {
 	// ErrorCode               string  `json:"errorCode"`
 	// ErrorMessage            string  `json:"errorMessage"`
 	// FailureReason           string  `json:"failureReason"`
-	AccountId               string  `json:"accountId"`
-	PaymentNetworkErrorCode string  `json:"paymentNetworkErrorCode"`
-	InternalErrorCode       string  `json:"internalErrorCode"`
+	// AccountId               string  `json:"accountId"`
+	// PaymentNetworkErrorCode string  `json:"paymentNetworkErrorCode"`
+	// InternalErrorCode       string  `json:"internalErrorCode"`
 }
 
 type WyreTransferDetails struct {
