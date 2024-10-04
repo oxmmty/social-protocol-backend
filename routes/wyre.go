@@ -33,8 +33,8 @@ type WyreWalletOrderWebhookPayload struct {
 }
 
 type WyreWalletOrderFullDetails struct {
-	Id                      string  `json:"id"`
-	CreatedAt               uint64  `json:"createdAt"`
+	// Id                      string  `json:"id"`
+	// CreatedAt               uint64  `json:"createdAt"`
 	Owner                   string  `json:"owner"`
 	Status                  string  `json:"status"`
 	OrderType               string  `json:"orderType"`
