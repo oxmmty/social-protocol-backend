@@ -55,8 +55,8 @@ type WyreWalletOrderFullDetails struct {
 }
 
 type WyreTransferDetails struct {
-	Owner              string      `json:"owner"`
-	ReversingSubStatus interface{} `json:"reversingSubStatus"`
+	// Owner              string      `json:"owner"`
+	// ReversingSubStatus interface{} `json:"reversingSubStatus"`
 	Source             string      `json:"source"`
 	PendingSubStatus   interface{} `json:"pendingSubStatus"`
 	Status             string      `json:"status"`
