@@ -43,8 +43,8 @@ type WyreWalletOrderFullDetails struct {
 	// SourceCurrency          string  `json:"sourceCurrency"`
 	// DestCurrency            string  `json:"destCurrency"`
 	// TransferId              string  `json:"transferId"`
-	Dest                    string  `json:"dest"`
-	AuthCodesRequested      bool    `json:"authCodesRequested"`
+	// Dest                    string  `json:"dest"`
+	// AuthCodesRequested      bool    `json:"authCodesRequested"`
 	ErrorCategory           string  `json:"errorCategory"`
 	ErrorCode               string  `json:"errorCode"`
 	ErrorMessage            string  `json:"errorMessage"`
