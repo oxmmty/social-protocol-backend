@@ -59,8 +59,8 @@ type WyreTransferDetails struct {
 	// ReversingSubStatus interface{} `json:"reversingSubStatus"`
 	// Source             string      `json:"source"`
 	// PendingSubStatus   interface{} `json:"pendingSubStatus"`
-	Status             string      `json:"status"`
-	ReversalReason     interface{} `json:"reversalReason"`
+	// Status             string      `json:"status"`
+	// ReversalReason     interface{} `json:"reversalReason"`
 	CreatedAt          int64       `json:"createdAt"`
 	SourceAmount       float64     `json:"sourceAmount"`
 	DestCurrency       string      `json:"destCurrency"`
